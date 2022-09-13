@@ -12,8 +12,8 @@ class SelectTeam2VC: UIViewController {
     @IBOutlet var backBut: UIButton!
     @IBOutlet var nextBut: UIButton!
     
-    let flagArray = ["poland", "greece", "lithuania", "germany", "italy", "ru"]
-    let countryArray = ["Poland", "Greece", "Lithuania", "Germany", "Italy", "Russia"]
+    let flagArray = ["argen", "japan", "finlan", "camer", "belgium", "bulgar"]
+    let countryArray = ["Argentina", "Japan", "Finland", "Camaroon", "Belgium", "Bulgaria"]
     
     let color1 = UIColor(red: 0.067, green: 0.106, blue: 0.165, alpha: 1)
     let color2 = UIColor(red: 0.046, green: 0.073, blue: 0.112, alpha: 1)

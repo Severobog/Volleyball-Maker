@@ -13,16 +13,18 @@ class FormationTeam1VC: UIViewController {
     @IBOutlet var backBut: UIButton!
     @IBOutlet var nextBut: UIButton!
     
-    let color1 = UIColor(red: 0.067, green: 0.106, blue: 0.165, alpha: 1)
-    let color2 = UIColor(red: 0.046, green: 0.073, blue: 0.112, alpha: 1)
+    let color1 = UIColor(red: 0.11, green: 0.31, blue: 0.486, alpha: 1)
+    let color2 = UIColor(red: 0.11, green: 0.31, blue: 0.856, alpha: 1)
     
-    let formationArray = ["Attacking against a zone defence",
-                          "Positional attack",
-                          "Counter-attack (fast break)",
-                          "Pressing defence",
-                          "Mixed defence",
-                          "Zone defence",
-                          "Defence against the ball carrier"
+    let formationArray = ["Volleyball: individual tactics",
+                          "Volleyball: Team tactics",
+                          "Volleyball: the combination with the 'overrunning' player",
+                          "Volleyball: Combination with one pass",
+                          "Volleyball: the combination from the back line of the court",
+                          "Volleyball: Collective defense tactics",
+                          "Volleyball: reflection of serve",
+                          "Volleyball: Deflecting offensive strikes",
+                          "Volleyball: the game system"
     ]
     
     var opp1Name: String = ""
@@ -72,7 +74,7 @@ extension FormationTeam1VC: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
         cell.layer.cornerRadius = 15
         cell.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        } else if indexPath.row == 5 {
+        } else if indexPath.row == 8 {
             cell.layer.cornerRadius = 15
             cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         }
