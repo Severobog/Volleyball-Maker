@@ -11,12 +11,13 @@ class FormationTeam1VC: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var backBut: UIButton!
+    @IBOutlet var maintitle: UILabel!
     @IBOutlet var nextBut: UIButton!
     
     let color1 = UIColor(red: 0.11, green: 0.31, blue: 0.486, alpha: 1)
     let color2 = UIColor(red: 0.11, green: 0.31, blue: 0.856, alpha: 1)
     
-    let formationArray = ["Volleyball: individual tactics",
+    let ENformationArray = ["Volleyball: individual tactics",
                           "Volleyball: Team tactics",
                           "Volleyball: the combination with the 'overrunning' player",
                           "Volleyball: Combination with one pass",
@@ -27,6 +28,17 @@ class FormationTeam1VC: UIViewController {
                           "Volleyball: the game system"
     ]
     
+    let RUformationArray = ["Волейбол: Индивидуальная тактика",
+                          "Волейбол: Коллективная тактика",
+                          "Волейбол: Комбинация с игроком передней линии",
+                          "Волейбол: Комбинация с «перебегающим» игроком",
+                          "Волейбол: Комбинация с одной передачей",
+                          "Волейбол: Коллективная тактика в защите",
+                          "Волейбол: Отражение подачи",
+                          "Волейбол: Отражение нападающих ударов",
+                          "Волейбол: Система игры"
+    ]
+    
     var opp1Name: String = ""
     var opp1Flag: String = ""
     
@@ -35,8 +47,10 @@ class FormationTeam1VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        maintitle.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Select Tactic 1" : "Выбор тактики 1"
         tableView.delegate = self
         tableView.dataSource = self
+        nextBut.setTitle(LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Next" : "Далее", for: .normal)
     }
     
     @IBAction func backAc(_ sender: UIButton) {
@@ -59,7 +73,7 @@ class FormationTeam1VC: UIViewController {
 extension FormationTeam1VC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return formationArray.count
+        return ENformationArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,7 +93,7 @@ extension FormationTeam1VC: UITableViewDelegate, UITableViewDataSource {
             cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         }
         
-        cell.label.text = formationArray[indexPath.row]
+        cell.label.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? ENformationArray[indexPath.row] : RUformationArray[indexPath.row]
         
         return cell
     }

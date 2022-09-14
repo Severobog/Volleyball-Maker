@@ -13,9 +13,20 @@ class SettingsVC: UIViewController {
     @IBOutlet var segmentedSound: UISegmentedControl!
     @IBOutlet var engButton: UIButton!
     @IBOutlet var rusButton: UIButton!
+
+    @IBOutlet var lightlbl: UILabel!
+    @IBOutlet var mainlbl: UILabel!
+    @IBOutlet var langlbl: UILabel!
+    @IBOutlet var vibrlbl: UILabel!
+    @IBOutlet var soundlbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Settings": "Настройки"
+        langlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Language": "Язык"
+        vibrlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Vibration": "Вибрация"
+        soundlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Sound": "Звук"
+        lightlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Screen Light": "Яркость экрана"
         
         screenLight.minimumValue = 0
         screenLight.maximumValue = 1
@@ -49,13 +60,25 @@ class SettingsVC: UIViewController {
     
     @IBAction func engAction(_ sender: UIButton) {
         AppDelegate.shared.playAudioFile()
+        self.restartApp()
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
     }
 
     @IBAction func rusAction(_ sender: UIButton) {
         AppDelegate.shared.playAudioFile()
+        self.restartApp()
+        LocalizationSystem.sharedInstance.setLanguage(languageCode: "ru")
     }
     @IBAction func vibrationControll(_ sender: UISegmentedControl) {
         AppDelegate.shared.playAudioFile()
+    }
+    
+    func restartApp() {
+        let alert = UIAlertController(title: nil, message: LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Need to reopen app for update app language." : "Необходимо повторно открыть приложение для обновления языка приложения." , preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: LocalizationSystem.sharedInstance.getLanguage() == "en" ? "OK" : "ХОРОШО", style: .default, handler: { action in
+            exit(0);
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

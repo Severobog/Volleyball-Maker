@@ -13,9 +13,11 @@ class MatchGenVC: UIViewController {
     
     @IBOutlet var mainLbl: UILabel!
     
+    @IBOutlet var mainlbl: UILabel!
     @IBOutlet var team1Flag: UIImageView!
     @IBOutlet var team1Name: UILabel!
     
+    @IBOutlet var genTitle: UILabel!
     @IBOutlet var team2Flag: UIImageView!
     @IBOutlet var team2Name: UILabel!
     
@@ -27,6 +29,8 @@ class MatchGenVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Match generation" : "Генерация матча"
+        genTitle.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Generation..." : "Генерация..."
         
         team1Flag.image = UIImage(named: opp1Flag)
         team1Name.text = opp1Name

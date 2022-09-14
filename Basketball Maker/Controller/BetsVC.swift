@@ -12,6 +12,7 @@ class BetsVC: UIViewController {
     @IBOutlet var backBut: UIButton!
     @IBOutlet var mainLbl: UILabel!
     
+    @IBOutlet var maintitle: UILabel!
     @IBOutlet var team1Flag: UIImageView!
     @IBOutlet var team2Flag: UIImageView!
     
@@ -34,6 +35,7 @@ class BetsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        maintitle.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Bets" : "Ставки"
         
         team1Flag.image = UIImage(named: opp1Flag)
         team1name.text = opp1Name

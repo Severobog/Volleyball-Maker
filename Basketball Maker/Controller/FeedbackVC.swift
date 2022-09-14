@@ -9,12 +9,14 @@ import UIKit
 
 class FeedbackVC: UIViewController {
     
+    @IBOutlet var feedlbl: UILabel!
     @IBOutlet var backBut: UIButton!
-
+    @IBOutlet var rateBut: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        feedlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Your feedback" : "Ваша оценка"
+        rateBut.setTitle(LocalizationSystem.sharedInstance.getLanguage() == "en" ? "Rate us" : "Оценить", for: .normal)
     }
     
     @IBAction func backAct(_ sender: UIButton) {

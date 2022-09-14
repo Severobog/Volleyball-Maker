@@ -8,6 +8,7 @@ import UIKit
 
 class NewsDetailsVC: UIViewController {
     
+    @IBOutlet var mainlbl: UILabel!
     @IBOutlet weak var imgNews: UIImageView!
     @IBOutlet weak var lblNewsTitle: UILabel!
     @IBOutlet weak var lblNewsDetails: UITextView!
@@ -24,6 +25,7 @@ class NewsDetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "News": "Новости"
         imgNews.setImage(url: details?.contents[0].consumable?.image_uri ?? "", placeholderImage: UIImage(named: "ic_news_bg"))
         lblNewsTitle.text = details?.contents[0].consumable?.title
     }

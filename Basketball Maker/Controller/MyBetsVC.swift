@@ -11,13 +11,13 @@ class MyBetsVC: UIViewController {
 
     @IBOutlet weak var backBut: UIButton!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var betlbl: UILabel!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        betlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "My Bets" : "Ставки"
     }
     
     @IBAction func backAct(_ sender: UIButton) {

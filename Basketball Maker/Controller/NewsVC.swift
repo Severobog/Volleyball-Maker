@@ -12,6 +12,7 @@ class NewsVC: UIViewController {
     @IBOutlet var backBut: UIButton!
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var mainlbl: UILabel!
     private let viewModel = CommonViewModel()
     var filterArr = [Layout]()
     
@@ -22,6 +23,7 @@ class NewsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.contentInset.top = 16
+        mainlbl.text = LocalizationSystem.sharedInstance.getLanguage() == "en" ? "News": "Новости"
         
     }
     

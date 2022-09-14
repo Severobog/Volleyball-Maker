@@ -45,6 +45,9 @@
 		FF88035228C9184400E0552C /* FormationTeam2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF88035128C9184400E0552C /* FormationTeam2VC.swift */; };
 		FF9D5DA328CA418E006CA6BA /* MatchGenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D5DA228CA418D006CA6BA /* MatchGenVC.swift */; };
 		FF9D5DA528CA4324006CA6BA /* MatchGenResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D5DA428CA4324006CA6BA /* MatchGenResultVC.swift */; };
+		FFC9921E28D18C970040D2FF /* LocalizedSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9921D28D18C970040D2FF /* LocalizedSystem.swift */; };
+		FFC9922028D197D40040D2FF /* DefaulValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9921F28D197D40040D2FF /* DefaulValues.swift */; };
+		FFC9922228D197D90040D2FF /* DateFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9922128D197D90040D2FF /* DateFormats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		FF88035128C9184400E0552C /* FormationTeam2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormationTeam2VC.swift; sourceTree = "<group>"; };
 		FF9D5DA228CA418D006CA6BA /* MatchGenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchGenVC.swift; sourceTree = "<group>"; };
 		FF9D5DA428CA4324006CA6BA /* MatchGenResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchGenResultVC.swift; sourceTree = "<group>"; };
+		FFC9921D28D18C970040D2FF /* LocalizedSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedSystem.swift; sourceTree = "<group>"; };
+		FFC9921F28D197D40040D2FF /* DefaulValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaulValues.swift; sourceTree = "<group>"; };
+		FFC9922128D197D90040D2FF /* DateFormats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +234,9 @@
 			children = (
 				FF1865B328C8BF6D00791AB3 /* UIView+Extensions.swift */,
 				FF1865B428C8BF6D00791AB3 /* Extensions.swift */,
+				FFC9921D28D18C970040D2FF /* LocalizedSystem.swift */,
+				FFC9921F28D197D40040D2FF /* DefaulValues.swift */,
+				FFC9922128D197D90040D2FF /* DateFormats.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -401,14 +410,17 @@
 				FF1865D228C8DA1400791AB3 /* CommomViewModel.swift in Sources */,
 				FF1865BD28C8D67900791AB3 /* BetsVC.swift in Sources */,
 				C4CEA2C028C7B4C700016C15 /* SceneDelegate.swift in Sources */,
+				FFC9922028D197D40040D2FF /* DefaulValues.swift in Sources */,
 				FF1865DE28C8DACC00791AB3 /* NewsDetailsVM.swift in Sources */,
 				FF1865CD28C8DA1400791AB3 /* APIClient.swift in Sources */,
 				FF1865DB28C8DACC00791AB3 /* NewsCell.swift in Sources */,
 				FF1865CF28C8DA1400791AB3 /* APIManager.swift in Sources */,
 				FF88034C28C9065C00E0552C /* SelectTeam1VC.swift in Sources */,
+				FFC9922228D197D90040D2FF /* DateFormats.swift in Sources */,
 				FF88034E28C9067F00E0552C /* SelectTeam2VC.swift in Sources */,
 				FF1865D128C8DA1400791AB3 /* Global Constants.swift in Sources */,
 				FF011A4028C891FD0013DC2C /* MenuVC.swift in Sources */,
+				FFC9921E28D18C970040D2FF /* LocalizedSystem.swift in Sources */,
 				FF1865B828C8C18400791AB3 /* NewsVC.swift in Sources */,
 				FF88035028C9180B00E0552C /* FormationTeam1VC.swift in Sources */,
 				FF1865DD28C8DACC00791AB3 /* NewsDetailsVC.swift in Sources */,
